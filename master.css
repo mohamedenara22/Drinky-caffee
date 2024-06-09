@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  @apply m-0 p-0 scroll-smooth;
+}
+.slides{
+  animation-name: slider;
+  animation-duration: 80s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+  transform: translateX(-1100%);
+}
+@keyframes slider{
+  0%{
+    transform: translateX(-1200%);
+  }
+  100%{
+    transform:translateX(1000%);
+  }
+}
+
+/* .slide{
+  animation-name: slide;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+  transform: translate(-100% , 100%);
+  transform:  rotate(360deg);
+}
+
+
+@keyframes slide{
+  0%{
+    transform: translate(-100% , 50%)  rotate(360deg);
+  }
+  100%{
+    transform: translate(0% , 0%)  rotate(0deg);
+  }
+} */
+
+
+
+@layer components{
+
+  .header {
+    @apply relative w-full h-screen overflow-hidden
+    bg-[url('/bg3.jpg')] bg-cover bg-no-repeat;
+  }
+
+  .nav-list {
+    @apply fixed w-[0%] h-[400px] flex flex-col flex-wrap justify-start items-start
+  bg-[#eee] right-0 top-[50px] duration-300 z-[20000];
+  }
+
+  .links-header {
+    @apply text-[#333] font-extrabold uppercase m-5 
+    hover:text-opacity-[0.6] duration-500 text-[1.2rem];
+  }
+
+  .btn-loction {
+    @apply absolute text-center text-[1rem] text-[#333] bottom-[50px]
+    capitalize italic font-bold hover:text-green-500 hover:scale-[1.1]
+    duration-500 left-[50px] underline decoration-green-700;
+  }
+
+  .material-icons {
+    @apply text-drinky
+  }
+  .manu-icon,
+  .fa-home,
+  .contact-icon,
+  .about-icon {
+    @apply text-drinky
+    text-[15px];
+  }
+  .navigation-full {
+    @apply w-full p-6 relative bg-drinky  z-[2000];
+  }
+
+  .fa-list-ul {
+    @apply absolute right-5 top-[15px] text-[#eee] cursor-pointer;
+  }
+  .text-header {
+    @apply w-full  absolute font-bold bg-black;
+  }
+  .h1-header {
+    @apply text-[2rem] text-[#eee] uppercase absolute 
+    top-[250px] left-5 tracking-[5px] leading-[60px] italic
+    underline decoration-drinky font-extrabold;
+  }
+  .p-header {
+    @apply text-[1.5rem] text-drinky capitalize absolute 
+    top-[450px] left-5;
+  }
+  .siders__menu--header{
+    @apply w-full flex flex-row flex-nowrap justify-center items-center
+    absolute bottom-2
+  }
+  .slides{
+    @apply w-[80px] mr-6 hover:opacity-[0.5] z-[3000]
+  }
+
+  .menu{
+    @apply w-full h-screen relative overflow-hidden
+    bg-[url('/bg4.jpg')] bg-cover bg-no-repeat
+  }
+  .menu__left{
+    @apply absolute left-[5%] top-[15vh] h-[50vh] w-[45%] shadow-lg shadow-[#333] 
+    rounded-lg
+  }
+  .menu__right{
+    @apply absolute right-[5%] top-[15vh] h-[50vh] w-[45%] shadow-lg shadow-[#333]
+    rounded-lg
+  }
+
+  .text__menu{
+    @apply relative w-full h-full flex justify-center items-center
+  }
+
+  .h1-menu{
+    @apply text-black uppercase tracking-[10px] italic absolute top-[40px]
+    text-[2.5rem] font-extrabold duration-500 hover:opacity-[0.7] 
+    cursor-pointer hover:scale-[1.2]
+  }
+  .p-menu{
+    @apply text-drinky text-[1.2rem]  italic absolute
+    bottom-[120px] left-10 duration-500 font-bold capitalize
+  }
+  .btn__menu--bar{
+    @apply absolute bottom-[50px] text-black bg-drinky uppercase
+    border-4 border-black p-1 text-[1.5rem] italic font-extrabold
+    rounded-lg cursor-pointer shadow-md shadow-green-700
+    hover:bg-transparent duration-500 hover:text-white
+  }
+  .sliders{
+    @apply relative h-screen overflow-hidden
+    m-0 duration-1000 
+  }
+  .slide{
+    @apply absolute w-full h-[35rem] flex justify-center items-center duration-1000
+
+  }
+
+  .image__slide{
+    @apply w-[200px] h-[200px] rounded-[35%] shadow-md shadow-[#333] absolute cursor-pointer
+  }
+
+  .footer__slider{
+    @apply w-full h-[35vh] absolute bottom-0  bg-drinky 
+  }
+  .parent-text__slide{
+    @apply relative w-full h-full flex justify-center items-center
+  }
+  .h1__slider{
+    @apply absolute text-[2rem] font-extrabold italic uppercase
+    text-[#333] tracking-widest   hover:opacity-[0.7] duration-500
+    top-2
+  }
+
+  .p__slider{
+    @apply absolute text-[1.4rem] font-bold italic capitalize
+    text-[#333] bottom-10 left-[5%]
+  }
+
+  .btns__slider{
+    @apply absolute bg-drinky rounded-[40%] cursor-pointer shadow-md shadow-[#333]
+    top-[50%] w-[35px] hover:scale-[1.1] duration-500 z-[2000]
+  }
+
+  .btn__right{
+    @apply right-[-5px]
+  }
+  .btn__left{
+  @apply left-[-5px] rotate-180
+  }
+  .parnt__btn__bigger{
+    @apply relative flex justify-center items-center w-full h-full
+  }
+  .large__menu{
+    @apply absolute top-[58%] font-bold text-[1rem] italic text-black
+    bg-drinky border-black border-2 uppercase  rounded-md cursor-pointer p-1
+    hover:bg-transparent duration-500
+  }
+.Allreviews{
+  @apply relative w-full h-[200vh] overflow-hidden
+}
+.elements__review{
+  @apply relative flex flex-row flex-wrap justify-center items-center h-full
+}
+.h1__review{
+  @apply uppercase italic text-[2rem] font-extrabold tracking-[3px]
+}
+.review{
+  @apply w-[400px] shadow-[#333] shadow-sm rounded-md my-2
+}
+
+.about{
+  @apply relative w-full h-screen overflow-hidden 
+}
+.text-about{
+@apply relative w-full h-full flex justify-center items-center 
+}
+
+.h1__about{
+  @apply absolute top-[100px] italic uppercase font-extrabold text-[2rem]
+  hover:opacity-[0.7] duration-500
+}
+.span__about{
+  @apply text-drinky
+}
+.line{
+  @apply absolute w-[300px] top-[160px] h-[4px] bg-drinky
+}
+.p__about{
+  @apply  italic capitalize font-bold text-[1.5rem] tracking-widest m-2
+}
+.btn-loction__about{
+  @apply absolute bottom-[100px] text-[1.8rem] capitalize italic tracking-wider
+  font-bold cursor-pointer hover:opacity-[0.7] duration-500
+}
+
+.contact{
+  @apply relative w-full h-screen overflow-hidden flex justify-center
+}
+.h1__contact{
+  @apply text-[1.5rem] font-extrabold uppercase tracking-widest italic
+  text-center absolute top-[60px]
+}
+.span__contact{
+  @apply text-drinky
+}
+.nav__contact{
+  @apply absolute top-[50%] w-full  flex flex-wrap justify-center items-center
+}
+.links__contact{
+  @apply text-[1.5rem] font-extrabold uppercase italic mr-7
+  hover:text-drinky duration-500
+}
+
+.nav--links__contact{
+  @apply absolute top-[30%] w-full  flex flex-wrap justify-center items-center
+}
+
+.facebook,
+.fa-instagram,
+.call,
+.whatsapp{
+  @apply mr-7  text-black bg-drinky rounded-[50%] p-2 cursor-pointer
+  shadow-md shadow-[#333] hover:opacity-[0.8] duration-500 
+}
+
+.btn-loction__contact{
+  @apply absolute bottom-[200px] font-bold italic capitalize tracking-wide
+  text-[1.5rem] cursor-pointer hover:opacity-[0.7] duration-500
+}
+
+.h2__contact{
+  @apply absolute bottom-[100px] capitalize font-bold tracking-wide
+  text-[1rem] 
+}
+
+.blur{
+  @apply fixed top-0 left-0 backdrop:blur-lg duration-500
+  w-full h-screen transition-all z-[5000]
+}
+} 
+
